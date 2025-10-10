@@ -9,4 +9,4 @@ This is my personal portfolio website built with HTML, CSS, and JavaScript.
 - Contact form
 
 ## 🌐 Live Demo
-You can view it here: https://abdulhameedsuraka.netlify.app/
+You can view it here: https://abdulhameed-port.netlify.app/
