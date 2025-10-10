@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Front-End Developer passionate about building modern, user-friendly web experiences.">
+    <title>Abdul Hameed Suraka | Front-End Developer</title>
+<link
+    rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="index.html"  class="logo">Abdul Hameed </a>
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav class="nav-menu" aria-label="Primary navigation">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about">
+                <div class="about-image">
+                <img src="images/About.webp" alt="About Picture">
+            </div>
+            <div class="about-text">
+                <p>I’m Abdul Hameed Suraka, a self-taught front-end developer from Ghana, driven by curiosity and a deep desire to build solutions that make life easier.
+                    I specialize in crafting visually appealing and responsive web interfaces using HTML, CSS, and JavaScript, and I’m currently learning React to take my skills to the next level.
+                    Beyond coding, I’m passionate about using technology to empower my community and contribute to the global digital space.
+                </p>
+            </div>
+            </div>
+            
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            
+            <div class="projects-container">
+                
+                <div class="project-card">
+                    <img src="images/project1.webp" alt="Project 1 Screenshot" class="project-image">
+                    <div class="project-info">
+                        <h3>Portfolio Website</h3>
+                        <p>A personal portfolio website to showcase my skills, projects, and contact information. Built with HTML, CSS, and JavaScript for a responsive and modern look.</p><br>
+                        <div class="project-links">
+                            <a href="https://your-portfolio-demo-link.com" target="_blank" rel="noopener" class="project-demo">Live Demo</a>
+                            <a href="https://github.com/Abdulhameedsurakadev-Gh" target="_blank" rel="noopener" class="project-github">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images/project2.webp" alt="Project 2 Screenshot" class="project-image">
+                    <div class="project-info">
+                        <h3>Upcoming Project</h3>
+                        <p>I'm currently building some exciting web projects. Stay tuned!</p><br>
+                        <div class="project-links">
+                            <a href="https://your-portfolio-demo-link.com" target="_blank" rel="noopener" class="project-demo">Live Demo</a>
+                            <a href="https://github.com/Abdulhameedsurakadev-Gh" target="_blank" rel="noopener" class="project-github">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images/project3.webp" alt="Project 3 Screenshot" class="project-image">
+                    <div class="project-info">
+                        <h3>Upcoming Project</h3>
+                        <p>I'm currently building some exciting web projects. Stay tuned!</p><br>
+                        <div class="project-links">
+                            <a href="https://your-portfolio-demo-link.com" target="_blank" rel="noopener" class="project-demo">Live Demo</a>
+                            <a href="https://github.com/Abdulhameedsurakadev-Gh" target="_blank" rel="noopener" class="project-github">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+             <h2>Contact</h2>
+            <div class="contact">
+                <div class="contact-image">
+                    <img src="images/contact.webp" alt="Contact Image">
+                </div>
+                <div class="contact-text">
+                    <form name="contact" method="POST" data-netlify="true" action="/thank-you.html">
+                        <input type="hidden" name="form-name" value="contact">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required cols="25" ></textarea>
+
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </body>
+    <footer>
+        <h3>Get in touch:</h3>
+        <div class="footer-social-links">
+            <a href="https://www.linkedin.com/in/suraka-abdul-hameed-12b331389" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img src="images/linkedin.svg" alt="LinkedIn" width="24" height="24">
+            </a>
+            <a href="https://github.com/Abdulhameedsurakadev-Gh" target="_blank" rel="noopener" aria-label="GitHub">
+                <img src="images/github.svg" alt="GitHub" width="24" height="24">
+            </a>
+            <a href="https://wa.me/+233202131864" target="_blank" rel="noopener" aria-label="WhatsApp">
+                <img src="images/whatsapp.svg" alt="WhatsApp" width="24" height="24">
+            </a>
+            <a href="mailto:abdulhameedsuraka.dev@gmail.com" target="_blank" rel="noopener" aria-label="Gmail">
+                <img src="images/gmail.svg" alt="Gmail" width="24" height="24">
+            </a>
+        </div>
+        <p>&copy; 2025 Abdul Hameed Suraka</p>
+    </footer>
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+  const navLinks = document.querySelectorAll('.nav-menu a');
+
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      menuToggle.classList.remove('active');
+      navMenu.classList.remove('active');
+    });
+  });
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
