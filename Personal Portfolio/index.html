@@ -11,24 +11,22 @@
 <body>
     <header class="site-header">
         <a href="index.html" class="logo">AH<span>.</span></a>
-        <button class="menu-toggle" aria-label="Toggle menu">
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </button>
-        <nav class="nav-menu">
+        <nav class="nav-menu" id="nav-menu">
             <ul>
                 <li><a href="#about">Expertise</a></li>
                 <li><a href="#projects">Work</a></li>
                 <li><a href="#contact">Hire Me</a></li>
-                <!-- Direct link to your Upwork from the Nav -->
-                <li><a href="https://upwork.com" class="nav-cta" target="_blank">Upwork Profile</a></li>
+                <li><a href="https://www.upwork.com/freelancers/~013ccd4da882f44e63?mp_source=share" class="nav-cta" target="_blank">Upwork Profile</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- NEW HERO SECTION -->
         <section id="hero" class="hero-section">
             <div class="hero-container">
                 <div class="hero-text">
@@ -46,7 +44,6 @@
             </div>
         </section>
 
-        <!-- UPDATED ABOUT / TECH STACK -->
         <section id="about" class="section-padding">
             <div class="container">
                 <div class="section-header">
@@ -73,7 +70,6 @@
             </div>
         </section>
 
-        <!-- PROJECTS SECTION (Refined) -->
         <section id="projects" class="section-padding">
             <div class="container">
                 <div class="section-header">
@@ -81,7 +77,23 @@
                 </div>
                 
                 <div class="projects-container">
-                    <!-- Project 1 -->
+                    <!-- Project 1: Al-Huda Boutique (High Value) -->
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="images/alhuda-preview.png" alt="Al-Huda Boutique">
+                        </div>
+                        <div class="project-info">
+                            <span class="tech-tag">Next.js 14 / TypeScript / Prisma</span>
+                            <h3>Al-Huda Boutique</h3>
+                            <p>A full-stack e-commerce solution featuring Clerk Auth and PostgreSQL. Built with a focus on type-safety, scalable architecture, and localized WhatsApp integration.</p>
+                            <div class="project-links">
+                                <a href="https://vercel.app" target="_blank">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                                <a href="https://github.com" target="_blank">GitHub <i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Govoyage Africa -->
                     <div class="project-card">
                         <div class="project-img-wrapper">
                             <img src="images/project3.png" alt="Govoyage Africa">
@@ -96,27 +108,10 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Project 2 -->
-                    <div class="project-card">
-                        <div class="project-img-wrapper">
-                            <img src="images/project2.png" alt="Clinic Website">
-                        </div>
-                        <div class="project-info">
-                            <span class="tech-tag">Tailwind CSS / HTML5</span>
-                            <h3>Clinic System</h3>
-                            <p>A professional healthcare landing page focusing on performance and clean UX patterns using modern CSS frameworks.</p>
-                            <div class="project-links">
-                                <a href="https://clinicwebq.netlify.app/" target="_blank">Live Demo <i class="fas fa-external-link-alt"></i></a>
-                                <a href="https://github.com/Abdulhameedsurakadev-Gh/ClinicWebsite" target="_blank">GitHub <i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- CONTACT SECTION -->
         <section id="contact" class="section-padding">
             <div class="container">
                 <div class="contact-card">
@@ -153,12 +148,22 @@
     </footer>
 
     <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-        menuToggle.onclick = () => {
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        const navLinks = document.querySelectorAll('.nav-menu a');
+
+        menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
-        };
+        });
+
+        // Close menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
     </script>
 </body>
 </html>
